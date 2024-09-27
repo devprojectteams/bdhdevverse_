@@ -39,7 +39,7 @@ function Hero() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [questions.length]); // Added questions.length to the dependency array
 
   return (
     <header

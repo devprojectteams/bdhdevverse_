@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image"; // Import the Image component
 import { FaArrowLeft } from "react-icons/fa"; // For the button icon
 
 const Maintenance = () => {
@@ -8,9 +9,11 @@ const Maintenance = () => {
       <div className="text-center p-4 max-w-md w-full rounded-lg bg-white shadow-lg">
         <div className="flex justify-center mb-6">
           {/* Placeholder for the maintenance image */}
-          <img
+          <Image
             src="/maintenance.png" // Replace with your image path
             alt="Under Maintenance"
+            width={256} // Set the width
+            height={256} // Set the height
             className="w-48 h-48 md:w-64 md:h-64"
           />
         </div>

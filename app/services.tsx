@@ -76,7 +76,7 @@ export function Services() {
         </h1>
         <p className="mx-auto w-full text-gray-500 lg:w-10/12">
           Bring your projects to life at the speed of thought. Launch, maintain, and scale your business with us.
-          We don't just write code; we architect scalable, secure, and user-friendly solutions. Our on-demand Agile Teams adapt to your needs, 
+          We don&apos;t just write code; we architect scalable, secure, and user-friendly solutions. Our on-demand Agile Teams adapt to your needs, 
           whether for short-term contracts or long-term partnerships. With rigorous Quality Assurance, we ensure minimal bugs and maximum satisfaction.
           Discover how we can help you below.
         </p>

@@ -1,9 +1,5 @@
-import Image from "next/image";
-
-
-
 // components
-import {  FixedPlugin, Footer, Navbar,  ProjectCard, ResumeItem, SkillCard } from "../components";
+import {  FixedPlugin, Footer, Navbar,  } from "../components";
 
 // sections
 import Hero from "./hero";
