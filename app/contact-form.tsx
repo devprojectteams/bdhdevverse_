@@ -95,9 +95,9 @@ export function ContactForm() {
               <PhoneIcon className="h-6 w-6 text-gray-300" />
               <p className="text-lg">+234 816 082 1473</p>
             </div>
-            <div className="flex gap-5 items-center mb-4">
+            <div className="flex flex-wrap gap-2 items-center mb-4  rounded-md">
               <EnvelopeIcon className="h-6 w-6 text-gray-300" />
-              <p className="text-lg">info.devverse@gmail.com</p>
+              <p className="text-base sm:text-lg break-all">info.devverse@gmail.com</p>
             </div>
             <div className="flex gap-5 items-center mb-10">
               <TicketIcon className="h-6 w-6 text-gray-300" />

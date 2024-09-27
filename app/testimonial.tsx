@@ -2,9 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
 
-// Testimonials data
 const testimonials = [
   {
     service: "Web & Mobile App Development",
@@ -46,7 +44,6 @@ const testimonials = [
 export function Testimonial() {
   const [active, setActive] = useState(0);
 
-  // Auto-slide functionality
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prevActive) => (prevActive + 1) % testimonials.length);
@@ -60,49 +57,31 @@ export function Testimonial() {
       <div className="container max-w-screen-lg mx-auto">
         {/* Section Title */}
         <div className="text-center text-blue-600 mb-12 lg:mb-20">
-          <Typography
-            variant="h2"
-            color="blue-gray"
-            className="text-3xl lg:text-5xl font-bold mb-4 animate-slide-in"
-          >
+          <h2 className="text-3xl lg:text-5xl font-bold mb-4 text-blue-gray-600 animate-slide-in">
             What Clients Say
-          </Typography>
-          <Typography
-            variant="lead"
-            className="mx-auto w-full px-4 font-normal !text-gray-600 lg:w-8/12 animate-fade-in"
-          >
+          </h2>
+          <p className="mx-auto w-full px-4 font-normal text-gray-600 lg:w-8/12 animate-fade-in">
             Discover what clients have to say about their experiences working
             with us. Our client’s satisfaction is our greatest gratification!
-          </Typography>
+          </p>
         </div>
 
         {/* Testimonial Card */}
-        <Card
-          color="transparent"
-          shadow={false}
-          className="flex flex-col lg:flex-row items-center py-8 lg:py-12 lg:gap-12 bg-white rounded-xl overflow-hidden shadow-lg"
-        >
+        <div className="flex flex-col lg:flex-row items-center py-8 lg:py-12 gap-12 bg-white rounded-xl overflow-hidden shadow-lg">
           {/* Testimonial Content */}
-          <CardBody className="w-full lg:w-6/12 p-6 lg:pl-12 text-center lg:text-left animate-zoom-in">
-            <Typography
-              variant="h3"
-              color="blue-gray"
-              className="mb-4 text-2xl lg:text-4xl font-bold lg:max-w-sm"
-            >
+          <div className="w-full lg:w-6/12 p-6 lg:pl-12 text-center lg:text-left animate-zoom-in">
+            <h3 className="mb-4 text-2xl lg:text-4xl font-bold text-blue-gray-600">
               {testimonials[active].service}
-            </Typography>
-            <Typography className="mb-3 text-gray-600 lg:w-10/12 font-normal leading-relaxed">
+            </h3>
+            <p className="mb-3 text-gray-600 leading-relaxed">
               {testimonials[active].text}
-            </Typography>
-            <Typography variant="h6" color="blue-gray" className="mb-0.5">
+            </p>
+            <h6 className="mb-0.5 text-blue-gray-600">
               {testimonials[active].name}
-            </Typography>
-            <Typography
-              variant="small"
-              className="font-normal mb-5 text-gray-500"
-            >
+            </h6>
+            <p className="font-normal mb-5 text-gray-500">
               {testimonials[active].role}
-            </Typography>
+            </p>
             {/* Avatar Navigation */}
             <div className="flex items-center justify-center lg:justify-start gap-4">
               {testimonials.map((_, index) => (
@@ -115,11 +94,9 @@ export function Testimonial() {
                   } hover:border-blue-600 transition-all duration-300`}
                   onClick={() => setActive(index)}
                 >
-                  <Avatar
-                    variant="rounded"
+                  <img
                     src={testimonials[index].image}
                     alt={`client avatar ${index + 1}`}
-                    size="sm"
                     className={`rounded-full w-12 h-12 ${
                       active === index ? "opacity-100" : "opacity-70"
                     } hover:opacity-100 transition-all duration-300`}
@@ -127,7 +104,7 @@ export function Testimonial() {
                 </div>
               ))}
             </div>
-          </CardBody>
+          </div>
 
           {/* Testimonial Image */}
           <div className="w-full h-64 sm:w-72 lg:w-[20rem] lg:h-[22rem] rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:scale-105">
@@ -139,7 +116,7 @@ export function Testimonial() {
               className="h-full w-full object-cover rounded-lg"
             />
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );

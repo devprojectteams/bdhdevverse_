@@ -1,5 +1,3 @@
-import { Card, Typography } from "@material-tailwind/react";
-
 interface ResumeItemProps {
   icon: React.ElementType;
   children: React.ReactNode;
@@ -8,15 +6,10 @@ interface ResumeItemProps {
 export function ResumeItem({ icon: Icon, children }: ResumeItemProps) {
   return (
     <div className="flex items-start gap-4">
-      <Card
-        color="gray"
-        className="h-12 w-12 shrink-0 items-center justify-center !rounded-lg"
-      >
+      <div className="h-12 w-12 bg-gray-200 rounded-lg flex items-center justify-center">
         <Icon className="h-6 w-6" strokeWidth={2} />
-      </Card>
-      <Typography className="w-full font-normal !text-gray-500">
-        {children}
-      </Typography>
+      </div>
+      <p className="w-full text-gray-500">{children}</p>
     </div>
   );
 }

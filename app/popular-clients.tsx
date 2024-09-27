@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 import { useState, useEffect } from "react";
 
 const CLIENTS = [
@@ -35,12 +34,12 @@ const PopularClients = () => {
     <section className="py-8 px-8 lg:py-20">
       <div className="container mx-auto grid items-center place-items-center">
         <div className="text-center">
-          <Typography variant="h6" className="mb-4 uppercase !text-gray-500">
+          <h6 className="mb-4 uppercase text-gray-500">
             SOME OF OUR CLIENTS
-          </Typography>
-          <Typography variant="h2" color="blue-gray" className="mb-4">
+          </h6>
+          <h2 className="text-blue-gray-600 mb-4">
             Trusted by over 10,000+ <br /> clients
-          </Typography>
+          </h2>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-6 mt-8">
           {CLIENTS.map((logo, index) => (

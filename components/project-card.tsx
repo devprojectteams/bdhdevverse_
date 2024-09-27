@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 
 interface ProjectCardProps {
   img: string;
   title: string;
   desc: string;
-  url: string; // Add a URL prop for each project
-  projectUrl: string; // Add hosted project URL for 'see details'
+  url: string;
+  projectUrl: string;
 }
 
 export function ProjectCard({ img, title, desc, url, projectUrl }: ProjectCardProps) {
@@ -30,11 +29,9 @@ export function ProjectCard({ img, title, desc, url, projectUrl }: ProjectCardPr
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Typography variant="h5" className="mb-2">
-            {title}
-          </Typography>
+          <h5 className="text-lg font-bold mb-2">{title}</h5>
         </a>
-        <Typography className="mb-6 font-normal !text-gray-500">{desc}</Typography>
+        <p className="mb-6 text-gray-500">{desc}</p>
         <a
           href={projectUrl}
           target="_blank"
@@ -49,4 +46,3 @@ export function ProjectCard({ img, title, desc, url, projectUrl }: ProjectCardPr
 }
 
 export default ProjectCard;
-
