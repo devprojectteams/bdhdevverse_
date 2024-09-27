@@ -1,4 +1,3 @@
-import { Typography } from "@material-tailwind/react";
 import { FaPaperPlane } from "react-icons/fa";
 
 const LINKS = ["Home", "About Us", "Blog", "Service"];
@@ -6,41 +5,21 @@ const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   return (
-    <footer className="relative bottom-0 left-0 w-full  bg-white text-white shadow-lg">
+    <footer className="relative bottom-0 left-0 w-full bg-white text-gray-800 shadow-lg">
       <div className="container mx-auto px-8 pt-10 pb-6">
         <div className="flex flex-col items-center">
-          <Typography className="text-center font-normal !text-gray-800 mb-4">
-            &copy; {CURRENT_YEAR} BDH Devverse{" "}
-            {/* <a
-              href="https://www.material-tailwind.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              Material Tailwind
-            </a>{" "}
-            by{" "}
-            <a
-              href="https://www.creative-tim.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline"
-            >
-              Creative Tim
-            </a>
-            . */}
-          </Typography>
+          <p className="text-center font-normal mb-4">
+            &copy; {CURRENT_YEAR} BDH Devverse
+          </p>
           <ul className="flex gap-8 items-center mb-4">
             {LINKS.map((link) => (
               <li key={link}>
-                <Typography
-                  as="a"
+                <a
                   href="#"
-                  variant="small"
                   className="font-normal text-gray-800 hover:text-blue-600 transition-colors"
                 >
                   {link}
-                </Typography>
+                </a>
               </li>
             ))}
           </ul>

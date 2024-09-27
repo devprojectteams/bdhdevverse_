@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 
 function Hero() {
   const [visible, setVisible] = useState(false);
@@ -33,13 +32,12 @@ function Hero() {
   }, []);
 
   useEffect(() => {
-    // Change questions every 3 seconds
     const interval = setInterval(() => {
       setQuestionIndex((prevIndex) => (prevIndex + 1) % questions.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [questions.length]); // Added questions.length to the dependency array
+  }, [questions.length]);
 
   return (
     <header
@@ -50,35 +48,27 @@ function Hero() {
     >
       <div className="container mx-auto flex flex-col items-center gap-10 min-h-[60vh] w-full">
         <div className="text-center">
-          {/* Breathing animation for the welcome text */}
-          <Typography
-            variant="h1"
-            color="blue-gray"
+          <h1
             className={`mb-4 text-3xl lg:text-5xl !leading-tight transition-transform duration-700 ${
               visible ? "animate-breathe text-blue-600" : ""
             }`}
           >
             <span className="text-blue-600">Welcome to BDH Devverse</span> <br />
             where innovation meets execution.
-          </Typography>
-          {/* Dancing text effect for the question */}
-          <Typography
-            variant="lead"
+          </h1>
+          <h2
             className={`mb-4 !text-gray-900 md:pr-16 xl:pr-28 transition-all duration-700 ${
               visible ? "text-gray-700 animate-dance" : "text-gray-500"
             }`}
           >
             {questions[questionIndex]}
-          </Typography>
-          <Typography
-            variant="lead"
-            className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
-          >
+          </h2>
+          <p className="mb-4 !text-gray-500 md:pr-16 xl:pr-28">
             We&apos;re more than developers, we&apos;re your 360° success partners.
             With a commitment to empower you to deliver 24/7 excellence. Let&apos;s turn your tech challenges into success stories,
             with our tailored solutions and a global talent pool.
             We&apos;re your premier partner in technology solutions and talent management.
-          </Typography>
+          </p>
         </div>
         <Image
           width={1024}
