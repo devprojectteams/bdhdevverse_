@@ -10,7 +10,7 @@ import Projects from "./projects";
 import Resume from "./resume";
 import Testimonial from "./testimonial";
 import PopularClients from "./popular-clients";
-import ContactForm from "./contact-form";
+import {ContactForm} from "./contact-form";
 
 export default function Home() {
   return (
