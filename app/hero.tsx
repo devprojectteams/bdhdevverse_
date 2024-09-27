@@ -74,10 +74,10 @@ function Hero() {
             variant="lead"
             className="mb-4 !text-gray-500 md:pr-16 xl:pr-28"
           >
-            We're more than developers, we're your 360° success partners.
-            With a commitment to empower you to deliver 24/7 excellence. Let's turn your tech challenges into success stories,
+            We&apos;re more than developers, we&apos;re your 360° success partners.
+            With a commitment to empower you to deliver 24/7 excellence. Let&apos;s turn your tech challenges into success stories,
             with our tailored solutions and a global talent pool.
-            We're your premier partner in technology solutions and talent management.
+            We&apos;re your premier partner in technology solutions and talent management.
           </Typography>
         </div>
         <Image
