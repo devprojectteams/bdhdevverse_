@@ -79,42 +79,40 @@ export function ContactForm() {
   return (
     <section className="px-8 py-16 bg-gradient-to-r from-blue-500 to-purple-500">
       <div className="container mx-auto mb-20 text-center">
-        <Typography variant="h1" color="white" className="mb-4">
-          Contact Us
-        </Typography>
-        <Typography variant="lead" className="mx-auto w-full lg:w-5/12 !text-gray-200">
+        <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
+        <p className="mx-auto w-full lg:w-5/12 text-lg text-gray-200">
           Ready to get started? Feel free to reach out through the contact form, and let's embark on a journey of innovation and success.
-        </Typography>
+        </p>
       </div>
       <div>
         <Card shadow={true} className="container mx-auto border border-gray-200 bg-white">
           <CardBody className="grid grid-cols-1 lg:grid-cols-7 md:gap-10">
             <div className="w-full col-span-3 rounded-lg h-full py-8 p-5 md:p-16 bg-blue-800 text-white">
-              <Typography variant="h4" className="mb-2">Contact Information</Typography>
-              <Typography variant="lead" className="mx-auto mb-8 text-base text-gray-300">
+              <h2 className="text-2xl font-semibold mb-2">Contact Information</h2>
+              <p className="mx-auto mb-8 text-base text-gray-300">
                 Fill up the form and our team will get back to you within 24 hours.
-              </Typography>
+              </p>
               <div className="flex gap-5 items-center mb-4">
                 <PhoneIcon className="h-6 w-6 text-gray-300" />
-                <Typography variant="h6">+234 816 082 1473</Typography>
+                <p className="text-lg">+234 816 082 1473</p>
               </div>
               <div className="flex gap-5 items-center mb-4">
                 <EnvelopeIcon className="h-6 w-6 text-gray-300" />
-                <Typography variant="h6">info.devverse@gmail.com</Typography>
+                <p className="text-lg">info.devverse@gmail.com</p>
               </div>
               <div className="flex gap-5 items-center mb-10">
                 <TicketIcon className="h-6 w-6 text-gray-300" />
-                <Typography variant="h6">Open Support Ticket</Typography>
+                <p className="text-lg">Open Support Ticket</p>
               </div>
               <div className="flex items-center gap-5">
                 <a href="https://facebook.com" className="hover:text-blue-400">
-                  <FontAwesomeIcon icon={faFacebook} className="text-lg hover:text-blue-400" />
+                  <FontAwesomeIcon icon={faFacebook} className="text-lg" />
                 </a>
                 <a href="https://instagram.com" className="hover:text-pink-500">
-                  <FontAwesomeIcon icon={faInstagram} className="text-lg hover:text-blue-400" />
+                  <FontAwesomeIcon icon={faInstagram} className="text-lg" />
                 </a>
                 <a href="https://github.com" className="hover:text-gray-400">
-                  <FontAwesomeIcon icon={faGithub} className="text-lg hover:text-blue-400" />
+                  <FontAwesomeIcon icon={faGithub} className="text-lg" />
                 </a>
               </div>
             </div>
@@ -155,12 +153,9 @@ export function ContactForm() {
                     className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
-                <Typography variant="lead" className="text-gray-700 text-sm mb-2">
-                  What are you interested in?
-                </Typography>
+                <p className="text-gray-700 text-sm mb-2">What are you interested in?</p>
                 <div className="mb-8">
-                  {["App Development/Project Dev. Outsourcing", "Recruitment/Talent Mgt.", "Consultancy/Training", 
-                  "Get Price Quotation", "Other"].map((interest) => (
+                  {["App Development/Project Dev. Outsourcing", "Recruitment/Talent Mgt.", "Consultancy/Training", "Get Price Quotation", "Other"].map((interest) => (
                     <div key={interest} className="flex items-center mb-4">
                       <input
                         type="radio"
